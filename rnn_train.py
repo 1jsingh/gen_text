@@ -36,7 +36,7 @@ Y_ = tf.placeholder(dtype = tf.uint8 , shape=[None,None],name='Y_') # [ BATCHSIZ
 
 #converting to one_hot encoding
 Xo = tf.one_hot(X, depth=ALPHASIZE ,axis=-1,name='Xo') # [ BATCHSIZE, SEQLEN, ALPHASIZE ]
-Yo_ = tf.one_hot(Y_, depth=ALPHASIZE ,axis=-1,name='Yo') # [ BATCHSIZE, SEQLEN, ALPHASIZE ]
+Yo_ = tf.one_hot(Y_, depth=ALPHASIZE ,axis=-1,name='Yo_') # [ BATCHSIZE, SEQLEN, ALPHASIZE ]
 
 ### defining the rnn cell
 
