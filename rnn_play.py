@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import text_utils as txt
+import argparse
 
 # these must match what was saved !
 ALPHASIZE = txt.ALPHASIZE

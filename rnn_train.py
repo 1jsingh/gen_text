@@ -8,20 +8,31 @@ import text_utils as txt
 import base_paths as bp
 import time
 import math
-
+import argparse
 
 # reading the data files
 codetext = txt.read_data_files("./data/*.txt")
 
+# defining the argument parser
+parser = argparse.ArgumentParser(description='train character level GRU text_generation model')
+parser.add_argument('-s','--seqlen', type=int, default=30 ,help='sequence length ')
+parser.add_argument('-b','--batchsize', type=int, default=200 ,help='batch size')
+parser.add_argument('-hs','--hiddensize', type=int, default=512 ,help='hidden state size of the GRU')
+parser.add_argument('-lr','--learning_rate', type=float, default=0.001 ,help='learning rate')
+parser.add_argument('-dr','--dropout', type=float, default=0.8 ,help='dropout value used in the GRU')
+parser.add_argument('-nl','--num_layers', type=int, choices=[2,3,4], default=3 ,help='number of GRU layers')
+
+
+args = parser.parse_args()
 
 ### defining parameters
-SEQLEN = 30
-BATCHSIZE = 200
+SEQLEN = args.seqlen
+BATCHSIZE = args.batchsize
 ALPHASIZE = txt.ALPHASIZE
-INTERNALSIZE = 512
-NLAYERS = 3
-learning_rate = 0.001  # fixed learning rate
-dropout_pkeep = 0.8    # some dropout
+INTERNALSIZE = args.hiddensize
+NLAYERS = args.num_layers
+learning_rate = args.learning_rate  # fixed learning rate
+dropout_pkeep = args.dropout    # some dropout
 
 
 ### defining the tensorflow graph
