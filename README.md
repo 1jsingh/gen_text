@@ -1,7 +1,7 @@
 # gen_text
 
 Tensorflow based implementation for char based text generation
-
+```
 usage: rnn_train.py [-h] [-s SEQLEN] [-b BATCHSIZE] [-hs HIDDENSIZE]
                     [-lr LEARNING_RATE] [-dr DROPOUT] [-nl {2,3,4}]
 
@@ -21,3 +21,4 @@ optional arguments:
                         dropout value used in the GRU
   -nl {2,3,4}, --num_layers {2,3,4}
                         number of GRU layers
+```
