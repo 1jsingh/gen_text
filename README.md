@@ -1,6 +1,8 @@
 # Char-RNN based Text generation
 
 Tensorflow based implementation for char based text generation
+
+## Usage
 ```
 usage: rnn_train.py [-h] [-s SEQLEN] [-b BATCHSIZE] [-hs HIDDENSIZE]
                     [-lr LEARNING_RATE] [-dr DROPOUT] [-nl {2,3,4}]
