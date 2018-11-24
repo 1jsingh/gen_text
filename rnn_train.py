@@ -91,7 +91,7 @@ timestamp = str(math.trunc(time.time()))
 
 if not os.path.exists("checkpoints"):
 	os.mkdir("checkpoints")
-saver = tf.train.Saver(max_to_keep=1000)
+saver = tf.train.Saver(max_to_keep=5)
 
 
 # for display: init the progress bar
