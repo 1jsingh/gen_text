@@ -1,4 +1,4 @@
-# gen_text
+# Char-RNN based Text generation
 
 Tensorflow based implementation for char based text generation
 ```
