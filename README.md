@@ -1,6 +1,6 @@
 # Char-RNN based Text generation
 
-Tensorflow based implementation for char based text generation
+Tensorflow based implementation for char-RNN based text generation
 
 ## Usage
 ```
